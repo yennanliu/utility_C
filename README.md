@@ -3,7 +3,7 @@
 ### Quick start 
 
 ```bash
-$ gcc -o helloworld.c helloworld.c.c
-$ ./helloworld.c
+$ gcc -o helloworld helloworld.c
+$ ./helloworld
 
 ```
