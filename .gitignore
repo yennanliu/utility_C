@@ -1,3 +1,6 @@
 # Unignore all with extensions 
 # e.g. : complied C binary files 
 !*.*
+
+# neglect .DS_Store
+.DS_Store
