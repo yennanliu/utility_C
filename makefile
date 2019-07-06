@@ -4,19 +4,17 @@ CC = gcc
 INSTDIR = $(pwd)
 INCLUDE = .
 
-all:helloworld
-
 default: help;
 
 define HELP
 \n
 cmd    		| help
 --------------------------------------------------------------------------------------
-build		| dev 
-check		| dev 
-deploy		| dev 
 help  		| show help table 
-test		| runs tests
+helloworld  	| dev 
+build		| dev 
+clean		| dev 
+install		| dev 
 \n
 endef
 
@@ -32,7 +30,7 @@ build: for_loop.c while.c array.c
 	$(CC) -o for_loop for_loop.c
 	$(CC) -o while while.c
 	$(CC) -o array array.c
-	
+
 clean:
 	rm -f helloworld
 	rm -f for_loop
