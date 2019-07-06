@@ -3,6 +3,8 @@
 
 # un-ignore file with extension c 
 !*.c
+!*.cpp
+!makefile
 
 # neglect .DS_Store
 .DS_Store
