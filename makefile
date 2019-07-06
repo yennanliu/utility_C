@@ -1,4 +1,9 @@
 # this is Makefile test
+# declare vars 
+CC = gcc
+INSTDIR = $(pwd)
+INCLUDE = .
+
 all:helloworld
 
 default: help;
@@ -17,19 +22,22 @@ endef
 
 export HELP
 
-# declare vars 
-CC = gcc
-INSTDIR = $(pwd)
-INCLUDE = .
-
 help:
 	@echo -n "$$HELP"
 
-helloworld: helloworld.c
+helloworld: helloworld.c 
 	$(CC) -o helloworld helloworld.c
 
+build: for_loop.c while.c array.c 
+	$(CC) -o for_loop for_loop.c
+	$(CC) -o while while.c
+	$(CC) -o array array.c
+	
 clean:
 	rm -f helloworld
+	rm -f for_loop
+	rm -f while
+	rm -f array
 
 install: mytest
 	@if[   -d $(INSTDIR)   ]; \
