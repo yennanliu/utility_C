@@ -2,6 +2,8 @@
  
 /* function declaration */
 int max(int num1, int num2);
+int addition(int num1, int num2);
+
  
 int main () {
 
@@ -9,11 +11,18 @@ int main () {
    int a = 100;
    int b = 200;
    int ret;
+   int ret_;
  
    /* calling a function to get max value */
    ret = max(a, b);
- 
+
+   ret_ = addition(a, b);
+
+   printf( "# max function demo");
    printf( "Max value is : %d\n", ret );
+
+   printf( "# add function demo");
+   printf( "Sum value is : %d\n", ret_ );
  
    return 0;
 }
@@ -30,4 +39,12 @@ int max(int num1, int num2) {
       result = num2;
  
    return result; 
+}
+
+int addition(int num1, int num2){
+
+   int result;
+   result = num1 + num2;
+   return result; 
+
 }
