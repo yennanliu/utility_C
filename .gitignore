@@ -5,6 +5,7 @@
 !*.c
 !*.cpp
 !makefile
+!/data
 
 # neglect .DS_Store
 .DS_Store
